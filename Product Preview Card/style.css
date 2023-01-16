@@ -7,17 +7,14 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 14px;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
   background-color: hsl(30, 38%, 92%);
   min-height: 100vh;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
+  font-size: 14px;
 }
 
 .container {
@@ -57,7 +54,6 @@ img.card-img {
 h6.product-category {
   text-transform: uppercase;
   letter-spacing: 0.35rem;
-  font-size: 0.94rem;
   color: hsl(228, 12%, 48%);
   font-weight: 500;
 }
@@ -66,6 +62,7 @@ h2.product-brand {
   font-family: "Fraunces", serif;
   font-size: 2.85rem;
   line-height: 1em;
+  padding-bottom: 0.625;
   color: hsl(212, 21%, 14%);
 }
 p.product-description {
@@ -92,7 +89,7 @@ p.current-price {
 .cta {
   background-color: hsl(158, 36%, 37%);
   border: none;
-  padding: 1rem 0;
+  padding: 1rem;
   border-radius: 0.85rem;
   color: white;
   font-size: 1rem;
@@ -100,6 +97,8 @@ p.current-price {
   cursor: pointer;
   transition: background-color 0.3s ease;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .cta img {
@@ -115,22 +114,32 @@ p.current-price {
     font-size: 10px;
   }
   .container {
-    margin: 0.2rem auto;
+    margin: 1rem auto;
   }
 
   .card {
     grid-template-columns: 1fr;
   }
+  
   img.card-img {
-    max-height: 35rem;
+    max-height: 45vh;
     min-width: 100%;
     object-fit: cover;
   }
 
+  h2.product-brand {
+    padding-bottom: 2rem;
+  }
+
   h6.product-category,
-  h2.product-brand,
   p.product-description,
   .price {
+    font-size: 1.5rem;
+    font-weight: 500;
     padding-bottom: 2rem;
+  }
+
+  .cta {
+    font-size: 1.5rem;
   }
 }
