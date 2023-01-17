@@ -1,0 +1,60 @@
+@media only screen and (max-width: 70rem) {
+  main {
+    max-width: 55rem;
+  }
+  .ratings {
+    width: 100%;
+    gap: 3rem;
+  }
+  .testimonial {
+    min-height: 100%;
+  }
+}
+
+@media only screen and (max-width: 59.1rem) {
+  body {
+    background-image: url(./images/bg-pattern-top-mobile.svg),
+      url(./images/bg-pattern-bottom-mobile.svg);
+
+      background-position: top left, bottom right;
+  }
+  main {
+    max-width: 20rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .container {
+    display: grid;
+    text-align: center;
+    gap: 1rem;
+    padding: 0 0.8rem;
+  }
+  .heading {
+    margin-right: 0;
+    font-size: 1.875rem;
+    line-height: 0.8;
+    padding: 0 1rem;
+    font-weight: 700;
+  }
+  .description {
+    font-size: 1rem;
+    margin-right: 0;
+  }
+
+  .ratings {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0;
+    margin-top: 0.1rem;
+  }
+
+  .ratings-stars {
+    padding-bottom: 0.2rem;
+  }
+
+  .testimonial-container {
+    grid-template-columns: 1fr;
+  }
+}
+
