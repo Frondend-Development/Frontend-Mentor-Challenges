@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(#faaca8, #ddd6f3);
+  color: black;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  gap: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 5rem;
+}
+
+.challenges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 3rem;
+}
+
+button {
+  border: none;
+
+  transition: all 0.2s;
+}
+
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: hsl(0, 0%, 100%, 0.7);
+  padding: 1.8rem 2rem;
+  border-radius: 100vw;
+  border: none;
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 1.6rem;
+  font-family: inherit;
+
+  transition: all 0.2s;
+
+  position: relative;
+}
+
+a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+a:active,
+a:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+a:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; /* will dissapear after hover */
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  background-color: hsl(0, 0%, 100%, 0.7);
+  color: hsl(0, 0%, 100%, 0.7);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 100vw;
+  z-index: -1;
+  transition: all 0.4s;
+
+  -webkit-animation: fromnBottom 0.8s ease-out 0.75s;
+  animation: fromnBottom 0.8s ease-out 0.75s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+
+@media only screen and (max-width: 700px) {
+  html {
+    font-size: 60%;
+  }
+  .challenges {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .heading {
+    font-size: 4rem;
+  }
+  .challenges {
+    grid-template-columns: 1fr;
+  }
+  a::after {
+    transition: none;
+  }
+}
