@@ -112,7 +112,7 @@ a::after {
 
 @media only screen and (max-width: 500px) {
   .heading {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
   .challenges {
     grid-template-columns: 1fr;
